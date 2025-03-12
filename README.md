@@ -9,10 +9,10 @@ A simple Kirby CMS plugin that adds cache busting parameters to your CSS and JS 
 1. Download the ZIP file and extract it to `/site/plugins/kirby-cache-buster`
 2. Rename the folder if needed
 
-### Composer
+### Git Submodule
 
 ```
-composer require yourname/kirby-cache-buster
+git submodule add git@github.com:grovesdm/kirby-cache-buster.git src/site/site/plugins/kirby-cache-buster
 ```
 
 ## Configuration
@@ -21,7 +21,7 @@ You can configure the plugin in your `config.php` file:
 
 ```php
 return [
-    'yourname.cache-buster' => [
+    'slyfox.cache-buster' => [
         'enabled' => true,
         'method' => 'timestamp' // 'timestamp' or 'hash'
     ]
@@ -39,7 +39,7 @@ To disable cache busting in your local environment, you can use environment dete
 
 ```php
 return [
-    'yourname.cache-buster' => [
+    'slyfox.cache-buster' => [
         'enabled' => environment() !== 'local'
     ]
 ];
@@ -60,4 +60,4 @@ MIT
 
 ## Author
 
-Your Name
+Daniel and Claude AI
